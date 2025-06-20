@@ -1,0 +1,9 @@
+# 最小依赖包 - 仅运行 enhanced_volume_trader.py 所需
+
+# 核心依赖
+requests>=2.28.0
+websocket-client>=1.4.0
+urllib3>=1.26.0
+
+# 网络代理支持（可选，如果使用代理）
+PySocks>=1.7.1 
