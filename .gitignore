@@ -257,13 +257,6 @@ credentials.json
 *.p12
 *.pfx
 
-# Log files
-*.log
-logs/
-logging/*.log
-trading_logs/
-error_logs/
-
 # Trading data and cache
 trading_data/
 cache/
