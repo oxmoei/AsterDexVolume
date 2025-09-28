@@ -10,7 +10,7 @@
 # 克隆仓库并进入项目目录
 git clone https://github.com/oxmoei/AsterDexVolume.git && cd AsterDexVolume
 
-# 自动配置环境和安装缺失的依赖
+# 自动安装缺失的依赖和配置环境
 ./install.sh
 ```
 ### 2. 配置API密钥
@@ -31,7 +31,7 @@ poetry run python enhanced_volume_trader.py
 ```
 ---
 
-## 🔴Windows 用户： 以管理员身份启动 PowerShell
+## 🔴Windows 用户：
 
 ### 1. 克隆仓库/安装依赖（确保你已安装 `git`，如果未安装请参考➡️[安装git教程](./安装git教程.md)）
 
@@ -44,7 +44,7 @@ cd AsterDexVolume
 # 设置允许当前用户运行脚本和启用 TLS 1.2
 Set-ExecutionPolicy Bypass -Scope CurrentUser -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;
 
-# 自动配置环境和安装缺失的依赖
+# 自动安装缺失的依赖和配置环境
 .\install_for_wins.ps1
 ```
 ### 2. 配置API密钥
