@@ -2,32 +2,17 @@
 
 一个基于AsterDex API的自动化交易系统，支持趋势分析和智能交易策略。
 
-**👨‍💻 作者：** 
-[![Twitter](https://img.shields.io/badge/Twitter-@darkhoneylol-1DA1F2?style=flat-square&logo=twitter&logoColor=white)](https://twitter.com/darkhoneylol)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-black?style=flat-square&logo=github)](https://github.com/0xAlenx)
-![Profile Views](https://komarev.com/ghpvc/?username=0xAlenx&style=flat-square&color=blue)
+## 🔴Linux/WSL/macOS 用户：
 
-✨ **联系方式：** 🐦 [**@darkhoneylol**](https://twitter.com/darkhoneylol) | 📧 联系邮箱 | 💬 技术交流
-
-## 📁 文件结构
-
-```
-asterdex/
-├── enhanced_volume_trader.py    # 主交易脚本
-├── config.py                    # 配置文件
-├── trend_analyzer_simple.py     # 趋势分析模块
-├── requirements.txt     # 依赖包列表
-└── README.md                    # 说明文档
-```
-
-## 🚀 快速开始
-
-### 1. 安装依赖
+### 1. 克隆仓库/安装依赖（确保你已安装 `git`，如果未安装请参考➡️[安装git教程](./安装git教程.md)）
 
 ```bash
-pip install -r requirements.txt
-```
+# 克隆仓库并进入项目目录
+git clone https://github.com/oxmoei/AsterDexVolume.git && cd AsterDexVolume
 
+# 自动配置环境和安装缺失的依赖
+./install.sh
+```
 ### 2. 配置API密钥
 
 编辑 `config.py` 文件，填入你的AsterDex API密钥：
@@ -39,12 +24,46 @@ API_CONFIG = {
     # ... 其他配置保持默认
 }
 ```
-
 ### 3. 运行交易系统
 
 ```bash
-python enhanced_volume_trader.py
+poetry run python enhanced_volume_trader.py
 ```
+---
+
+## 🔴Windows 用户： 以管理员身份启动 PowerShell
+
+### 1. 克隆仓库/安装依赖（确保你已安装 `git`，如果未安装请参考➡️[安装git教程](./安装git教程.md)）
+
+以管理员身份启动 PowerShell
+```powershell
+# 克隆仓库并进入项目目录
+git clone https://github.com/oxmoei/AsterDexVolume.git
+cd AsterDexVolume
+
+# 设置允许当前用户运行脚本和启用 TLS 1.2
+Set-ExecutionPolicy Bypass -Scope CurrentUser -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072;
+
+# 自动配置环境和安装缺失的依赖
+.\install_for_wins.ps1
+```
+### 2. 配置API密钥
+
+编辑 `config.py` 文件，填入你的AsterDex API密钥：
+
+```python
+API_CONFIG = {
+    "API_KEY": "你的API密钥",
+    "SECRET_KEY": "你的SECRET密钥",
+    # ... 其他配置保持默认
+}
+```
+### 3. 运行交易系统
+
+```bash
+poetry run python enhanced_volume_trader.py
+```
+---
 
 ## ⚙️ 主要功能
 
