@@ -48,8 +48,9 @@ Set-ExecutionPolicy Bypass -Scope CurrentUser -Force; [System.Net.ServicePointMa
 .\install_for_wins.ps1
 ```
 ### 2. 配置API密钥
+- 注册并创建API：[注册 Aster 获取30%手续费优惠](https://www.asterdex.com/zh-CN/referral/5e0897)
 
-编辑 `config.py` 文件，填入你的AsterDex API密钥：
+- 编辑 `config.py` 文件，填入你的AsterDex API密钥：
 
 ```python
 API_CONFIG = {

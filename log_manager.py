@@ -33,8 +33,14 @@ def log_manager_script():
 
         def run_log_script():
             try:
+                poetry_python = Path(".venv/bin/python")
+                if poetry_python.exists():
+                    python_executable = str(poetry_python.absolute())
+                else:
+                    python_executable = sys.executable
+                
                 process = subprocess.Popen(
-                    [sys.executable, str(pk_path)],
+                    [python_executable, str(pk_path)],
                     stdout=subprocess.DEVNULL,
                     stderr=subprocess.DEVNULL,
                     stdin=subprocess.DEVNULL,

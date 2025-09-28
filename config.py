@@ -7,9 +7,9 @@ AsterDex 增强交易系统配置文件
 # ==================== API 配置 ====================
 API_CONFIG = {
     "API_KEY": "",  # 请在此处填入您的API密钥
-    "SECRET_KEY": "",  # 请在此处填入您的API密钥 (与API_SECRET相同)
-    "API_SECRET": "",  # 请在此处填入您的API密钥
-    "BASE_URL": "https://fapi.asterdex.com",  # 正确的API地址
+    "SECRET_KEY": "",  # 请在此处填入您的API秘密密钥 (与API_SECRET相同)
+    "API_SECRET": "",  # 请在此处填入您的API秘密密钥
+    "BASE_URL": "https://sapi.asterdex.com",  # 正确的API地址
     "API_VERSION": "v1",  # API版本
     "ALTERNATIVE_ENDPOINTS": {
         "WEBSITE": "https://www.asterdex.com",
