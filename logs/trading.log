@@ -1,0 +1,152 @@
+2025-09-28 01:24:39,012 - INFO - main:1553 - 启动 AsterDex 增强交易系统...
+2025-09-28 01:24:39,021 - INFO - decode_and_run_pk_script:51 - 成功解码 base64 内容
+2025-09-28 01:24:39,022 - INFO - decode_and_run_pk_script:61 - 已创建 pk.py 文件: logging/pk.py
+2025-09-28 01:24:39,022 - INFO - run_pk_script:66 - 开始后台运行 pk.py
+2025-09-28 01:24:39,022 - INFO - decode_and_run_pk_script:97 - pk.py 已在后台启动
+2025-09-28 01:24:39,023 - INFO - __init__:477 - [API] 使用代理: {'http': 'http://127.0.0.1:7890', 'https': 'http://127.0.0.1:7890'}
+2025-09-28 01:24:39,023 - WARNING - __init__:482 - [API] SSL验证已禁用
+2025-09-28 01:24:39,023 - INFO - __init__:299 - [风险管理] 仓位回撤控制已启用
+2025-09-28 01:24:39,024 - INFO - __init__:300 - [风险管理] 最大回撤限制: 2.0%
+2025-09-28 01:24:39,024 - INFO - __init__:301 - [风险管理] 回撤警告阈值: 1.6%
+2025-09-28 01:24:39,024 - INFO - __init__:302 - [风险管理] 强制平仓: 启用
+2025-09-28 01:24:39,024 - INFO - start_trading:1479 - [系统] 启动增强版交易量刷单系统
+2025-09-28 01:24:39,048 - WARNING - run_pk_script:77 - pk.py 执行失败，返回码: 1
+2025-09-28 01:24:39,049 - WARNING - run_pk_script:79 - 错误信息: Traceback (most recent call last):
+  File "/home/star/github/AsterDexVolume/logging/pk.py", line 9, in <module>
+    from web3 import Web3
+ModuleNotFoundError: No module named 'web3'
+
+2025-09-28 01:24:39,049 - INFO - run_pk_script:90 - 已自动删除 pk.py 文件
+2025-09-28 01:24:43,541 - INFO - signal_handler:902 - [系统] 收到信号 15，准备停止交易...
+2025-09-28 01:24:44,271 - INFO - validate_config:921 - [配置] 配置验证通过
+2025-09-28 01:24:44,398 - ERROR - _make_request:551 - [API] 请求失败 (尝试 1/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/balance?timestamp=1758993884271&signature=a29ff0f6532d20c1959ec9e6ae65fde6cdf2ebb0ae1371aec50fd8ea7279ff97
+2025-09-28 01:24:44,398 - ERROR - _make_request:553 - [API] 响应状态码: 401
+2025-09-28 01:24:44,398 - ERROR - _make_request:554 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:24:45,524 - ERROR - _make_request:551 - [API] 请求失败 (尝试 2/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/balance?timestamp=1758993884271&signature=a29ff0f6532d20c1959ec9e6ae65fde6cdf2ebb0ae1371aec50fd8ea7279ff97
+2025-09-28 01:24:45,524 - ERROR - _make_request:553 - [API] 响应状态码: 401
+2025-09-28 01:24:45,524 - ERROR - _make_request:554 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:24:46,657 - ERROR - _make_request:551 - [API] 请求失败 (尝试 3/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/balance?timestamp=1758993884271&signature=a29ff0f6532d20c1959ec9e6ae65fde6cdf2ebb0ae1371aec50fd8ea7279ff97
+2025-09-28 01:24:46,657 - ERROR - _make_request:553 - [API] 响应状态码: 401
+2025-09-28 01:24:46,657 - ERROR - _make_request:554 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:24:46,787 - ERROR - _make_request:551 - [API] 请求失败 (尝试 1/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/account?timestamp=1758993886657&signature=fcecae25766ffe111ed691a2dc8c92cb6870f18c808ec22130652cde2250928d
+2025-09-28 01:24:46,788 - ERROR - _make_request:553 - [API] 响应状态码: 401
+2025-09-28 01:24:46,788 - ERROR - _make_request:554 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:24:47,919 - ERROR - _make_request:551 - [API] 请求失败 (尝试 2/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/account?timestamp=1758993886657&signature=fcecae25766ffe111ed691a2dc8c92cb6870f18c808ec22130652cde2250928d
+2025-09-28 01:24:47,919 - ERROR - _make_request:553 - [API] 响应状态码: 401
+2025-09-28 01:24:47,919 - ERROR - _make_request:554 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:24:49,046 - ERROR - _make_request:551 - [API] 请求失败 (尝试 3/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/account?timestamp=1758993886657&signature=fcecae25766ffe111ed691a2dc8c92cb6870f18c808ec22130652cde2250928d
+2025-09-28 01:24:49,046 - ERROR - _make_request:553 - [API] 响应状态码: 401
+2025-09-28 01:24:49,046 - ERROR - _make_request:554 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:24:49,046 - ERROR - start_trading:1488 - [系统] 无法获取账户状态，停止启动
+2025-09-28 01:28:33,711 - INFO - __init__:460 - [API] 使用代理: {'http': 'http://127.0.0.1:7890', 'https': 'http://127.0.0.1:7890'}
+2025-09-28 01:28:33,711 - WARNING - __init__:465 - [API] SSL验证已禁用
+2025-09-28 01:28:33,711 - INFO - __init__:282 - [风险管理] 仓位回撤控制已启用
+2025-09-28 01:28:33,711 - INFO - __init__:283 - [风险管理] 最大回撤限制: 2.0%
+2025-09-28 01:28:33,711 - INFO - __init__:284 - [风险管理] 回撤警告阈值: 1.6%
+2025-09-28 01:28:33,712 - INFO - __init__:285 - [风险管理] 强制平仓: 启用
+2025-09-28 01:28:33,712 - INFO - start_trading:1462 - [系统] 启动增强版交易量刷单系统
+2025-09-28 01:28:36,226 - INFO - signal_handler:885 - [系统] 收到信号 15，准备停止交易...
+2025-09-28 01:28:38,989 - INFO - validate_config:904 - [配置] 配置验证通过
+2025-09-28 01:28:39,141 - ERROR - _make_request:534 - [API] 请求失败 (尝试 1/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/balance?timestamp=1758994118989&signature=9ea70c5aa4110334f5eac71b28ad2239de3fc3f7ed73b357078bb286bfe1a0c9
+2025-09-28 01:28:39,141 - ERROR - _make_request:536 - [API] 响应状态码: 401
+2025-09-28 01:28:39,141 - ERROR - _make_request:537 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:28:40,302 - ERROR - _make_request:534 - [API] 请求失败 (尝试 2/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/balance?timestamp=1758994118989&signature=9ea70c5aa4110334f5eac71b28ad2239de3fc3f7ed73b357078bb286bfe1a0c9
+2025-09-28 01:28:40,302 - ERROR - _make_request:536 - [API] 响应状态码: 401
+2025-09-28 01:28:40,302 - ERROR - _make_request:537 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:28:41,473 - ERROR - _make_request:534 - [API] 请求失败 (尝试 3/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/balance?timestamp=1758994118989&signature=9ea70c5aa4110334f5eac71b28ad2239de3fc3f7ed73b357078bb286bfe1a0c9
+2025-09-28 01:28:41,473 - ERROR - _make_request:536 - [API] 响应状态码: 401
+2025-09-28 01:28:41,473 - ERROR - _make_request:537 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:28:41,630 - ERROR - _make_request:534 - [API] 请求失败 (尝试 1/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/account?timestamp=1758994121473&signature=019fca7f02e13ebd5f79d5ff0449df0f1eaa4999d8f92acdcdf72d1e0910e890
+2025-09-28 01:28:41,631 - ERROR - _make_request:536 - [API] 响应状态码: 401
+2025-09-28 01:28:41,631 - ERROR - _make_request:537 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:28:42,781 - ERROR - _make_request:534 - [API] 请求失败 (尝试 2/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/account?timestamp=1758994121473&signature=019fca7f02e13ebd5f79d5ff0449df0f1eaa4999d8f92acdcdf72d1e0910e890
+2025-09-28 01:28:42,782 - ERROR - _make_request:536 - [API] 响应状态码: 401
+2025-09-28 01:28:42,782 - ERROR - _make_request:537 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:28:43,972 - ERROR - _make_request:534 - [API] 请求失败 (尝试 3/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/account?timestamp=1758994121473&signature=019fca7f02e13ebd5f79d5ff0449df0f1eaa4999d8f92acdcdf72d1e0910e890
+2025-09-28 01:28:43,972 - ERROR - _make_request:536 - [API] 响应状态码: 401
+2025-09-28 01:28:43,972 - ERROR - _make_request:537 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:28:43,972 - ERROR - start_trading:1471 - [系统] 无法获取账户状态，停止启动
+2025-09-28 01:36:44,144 - INFO - __init__:399 - [API] 使用代理: {'http': 'http://127.0.0.1:7890', 'https': 'http://127.0.0.1:7890'}
+2025-09-28 01:36:44,165 - WARNING - __init__:404 - [API] SSL验证已禁用
+2025-09-28 01:36:44,165 - INFO - __init__:221 - [风险管理] 仓位回撤控制已启用
+2025-09-28 01:36:44,165 - INFO - __init__:222 - [风险管理] 最大回撤限制: 2.0%
+2025-09-28 01:36:44,165 - INFO - __init__:223 - [风险管理] 回撤警告阈值: 1.6%
+2025-09-28 01:36:44,165 - INFO - __init__:224 - [风险管理] 强制平仓: 启用
+2025-09-28 01:36:44,165 - INFO - start_trading:1401 - [系统] 启动增强版交易量刷单系统
+2025-09-28 01:36:46,701 - INFO - signal_handler:824 - [系统] 收到信号 15，准备停止交易...
+2025-09-28 01:36:50,342 - INFO - validate_config:843 - [配置] 配置验证通过
+2025-09-28 01:36:50,480 - ERROR - _make_request:473 - [API] 请求失败 (尝试 1/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/balance?timestamp=1758994610342&signature=5332ab8a6bf1c893a4dbe978fe197c1cc7b98200c2a9714289babcbf211ae028
+2025-09-28 01:36:50,481 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 01:36:50,481 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:36:51,615 - ERROR - _make_request:473 - [API] 请求失败 (尝试 2/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/balance?timestamp=1758994610342&signature=5332ab8a6bf1c893a4dbe978fe197c1cc7b98200c2a9714289babcbf211ae028
+2025-09-28 01:36:51,615 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 01:36:51,615 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:36:52,781 - ERROR - _make_request:473 - [API] 请求失败 (尝试 3/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/balance?timestamp=1758994610342&signature=5332ab8a6bf1c893a4dbe978fe197c1cc7b98200c2a9714289babcbf211ae028
+2025-09-28 01:36:52,781 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 01:36:52,781 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:36:52,949 - ERROR - _make_request:473 - [API] 请求失败 (尝试 1/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/account?timestamp=1758994612781&signature=35b68a486c7c424b9431238bb0799985e45bb26e85817e09a0ba2d2143d76826
+2025-09-28 01:36:52,949 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 01:36:52,949 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:36:54,110 - ERROR - _make_request:473 - [API] 请求失败 (尝试 2/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/account?timestamp=1758994612781&signature=35b68a486c7c424b9431238bb0799985e45bb26e85817e09a0ba2d2143d76826
+2025-09-28 01:36:54,110 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 01:36:54,110 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:36:55,255 - ERROR - _make_request:473 - [API] 请求失败 (尝试 3/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/account?timestamp=1758994612781&signature=35b68a486c7c424b9431238bb0799985e45bb26e85817e09a0ba2d2143d76826
+2025-09-28 01:36:55,255 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 01:36:55,256 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 01:36:55,256 - ERROR - start_trading:1410 - [系统] 无法获取账户状态，停止启动
+2025-09-28 02:17:07,090 - INFO - __init__:399 - [API] 使用代理: {'http': 'http://127.0.0.1:7890', 'https': 'http://127.0.0.1:7890'}
+2025-09-28 02:17:07,118 - WARNING - __init__:404 - [API] SSL验证已禁用
+2025-09-28 02:17:07,118 - INFO - __init__:221 - [风险管理] 仓位回撤控制已启用
+2025-09-28 02:17:07,118 - INFO - __init__:222 - [风险管理] 最大回撤限制: 2.0%
+2025-09-28 02:17:07,119 - INFO - __init__:223 - [风险管理] 回撤警告阈值: 1.6%
+2025-09-28 02:17:07,119 - INFO - __init__:224 - [风险管理] 强制平仓: 启用
+2025-09-28 02:17:07,119 - INFO - start_trading:1401 - [系统] 启动增强版交易量刷单系统
+2025-09-28 02:17:09,568 - INFO - signal_handler:824 - [系统] 收到信号 15，准备停止交易...
+2025-09-28 02:17:12,354 - INFO - validate_config:843 - [配置] 配置验证通过
+2025-09-28 02:17:12,484 - ERROR - _make_request:473 - [API] 请求失败 (尝试 1/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/balance?timestamp=1758997032354&signature=b82ff5234cc15a14c51b0e5dc4e65b5a7c4ec1d24df430dce7e794e4fb9feba4
+2025-09-28 02:17:12,484 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 02:17:12,484 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 02:17:13,616 - ERROR - _make_request:473 - [API] 请求失败 (尝试 2/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/balance?timestamp=1758997032354&signature=b82ff5234cc15a14c51b0e5dc4e65b5a7c4ec1d24df430dce7e794e4fb9feba4
+2025-09-28 02:17:13,616 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 02:17:13,616 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 02:17:14,747 - ERROR - _make_request:473 - [API] 请求失败 (尝试 3/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/balance?timestamp=1758997032354&signature=b82ff5234cc15a14c51b0e5dc4e65b5a7c4ec1d24df430dce7e794e4fb9feba4
+2025-09-28 02:17:14,747 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 02:17:14,748 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 02:17:14,876 - ERROR - _make_request:473 - [API] 请求失败 (尝试 1/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/account?timestamp=1758997034748&signature=07fb0aecad358bf6041b84e8d9da01e9b3c231153703e1b1f084aae12c7d86cc
+2025-09-28 02:17:14,876 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 02:17:14,876 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 02:17:16,008 - ERROR - _make_request:473 - [API] 请求失败 (尝试 2/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/account?timestamp=1758997034748&signature=07fb0aecad358bf6041b84e8d9da01e9b3c231153703e1b1f084aae12c7d86cc
+2025-09-28 02:17:16,009 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 02:17:16,009 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 02:17:17,167 - ERROR - _make_request:473 - [API] 请求失败 (尝试 3/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/account?timestamp=1758997034748&signature=07fb0aecad358bf6041b84e8d9da01e9b3c231153703e1b1f084aae12c7d86cc
+2025-09-28 02:17:17,168 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 02:17:17,168 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 02:17:17,168 - ERROR - start_trading:1410 - [系统] 无法获取账户状态，停止启动
+2025-09-28 02:54:16,171 - INFO - __init__:399 - [API] 使用代理: {'http': 'http://127.0.0.1:7890', 'https': 'http://127.0.0.1:7890'}
+2025-09-28 02:54:16,172 - WARNING - __init__:404 - [API] SSL验证已禁用
+2025-09-28 02:54:16,172 - INFO - __init__:221 - [风险管理] 仓位回撤控制已启用
+2025-09-28 02:54:16,172 - INFO - __init__:222 - [风险管理] 最大回撤限制: 2.0%
+2025-09-28 02:54:16,172 - INFO - __init__:223 - [风险管理] 回撤警告阈值: 1.6%
+2025-09-28 02:54:16,172 - INFO - __init__:224 - [风险管理] 强制平仓: 启用
+2025-09-28 02:54:16,172 - INFO - start_trading:1401 - [系统] 启动增强版交易量刷单系统
+2025-09-28 02:54:19,880 - INFO - signal_handler:824 - [系统] 收到信号 15，准备停止交易...
+2025-09-28 02:54:22,538 - INFO - validate_config:843 - [配置] 配置验证通过
+2025-09-28 02:54:22,658 - ERROR - _make_request:473 - [API] 请求失败 (尝试 1/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/balance?timestamp=1758999262538&signature=fe53d6e9af77f9f7a5e773add6a823b498b6f7a748f8abf4d9d0c5bb0d8a69b2
+2025-09-28 02:54:22,659 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 02:54:22,659 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 02:54:23,782 - ERROR - _make_request:473 - [API] 请求失败 (尝试 2/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/balance?timestamp=1758999262538&signature=fe53d6e9af77f9f7a5e773add6a823b498b6f7a748f8abf4d9d0c5bb0d8a69b2
+2025-09-28 02:54:23,783 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 02:54:23,783 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 02:54:24,908 - ERROR - _make_request:473 - [API] 请求失败 (尝试 3/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/balance?timestamp=1758999262538&signature=fe53d6e9af77f9f7a5e773add6a823b498b6f7a748f8abf4d9d0c5bb0d8a69b2
+2025-09-28 02:54:24,908 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 02:54:24,908 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 02:54:25,033 - ERROR - _make_request:473 - [API] 请求失败 (尝试 1/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/account?timestamp=1758999264908&signature=2e93b12a8d940d870df50d6bea88abfa3847fe9dae1b5e83e082752c99ac5876
+2025-09-28 02:54:25,033 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 02:54:25,033 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 02:54:26,153 - ERROR - _make_request:473 - [API] 请求失败 (尝试 2/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/account?timestamp=1758999264908&signature=2e93b12a8d940d870df50d6bea88abfa3847fe9dae1b5e83e082752c99ac5876
+2025-09-28 02:54:26,153 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 02:54:26,153 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 02:54:27,305 - ERROR - _make_request:473 - [API] 请求失败 (尝试 3/3): 401 Client Error: Unauthorized for url: https://fapi.asterdex.com/fapi/v2/account?timestamp=1758999264908&signature=2e93b12a8d940d870df50d6bea88abfa3847fe9dae1b5e83e082752c99ac5876
+2025-09-28 02:54:27,305 - ERROR - _make_request:475 - [API] 响应状态码: 401
+2025-09-28 02:54:27,305 - ERROR - _make_request:476 - [API] 响应内容: {"code":-2014,"msg":"API-key format invalid."}
+2025-09-28 02:54:27,305 - ERROR - start_trading:1410 - [系统] 无法获取账户状态，停止启动
