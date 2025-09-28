@@ -490,11 +490,11 @@ class EnhancedAsterDexAPI:
 
     def get_account_info(self):
         """获取账户信息"""
-        return self._make_request("GET", "/fapi/v2/account", signed=True)
+        return self._make_request("GET", "/fapi/v1/account", signed=True)
 
     def get_balance(self):
-        """获取账户余额V2"""
-        return self._make_request("GET", "/fapi/v2/balance", signed=True)
+        """获取账户余额"""
+        return self._make_request("GET", "/fapi/v1/balance", signed=True)
 
     def place_order(
         self,
@@ -590,7 +590,7 @@ class EnhancedAsterDexAPI:
         params = {}
         if symbol:
             params["symbol"] = symbol
-        return self._make_request("GET", "/fapi/v2/positionRisk", params, signed=True)
+        return self._make_request("GET", "/fapi/v1/positionRisk", params, signed=True)
 
     def get_order_status(self, symbol, order_id):
         """查询订单状态"""
