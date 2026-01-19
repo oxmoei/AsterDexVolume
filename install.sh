@@ -113,6 +113,10 @@ if ! pip3 show cryptography >/dev/null 2>&1; then
     $PIP_INSTALL cryptography
 fi
 
+if ! pip3 show pycryptodome >/dev/null 2>&1; then
+    $PIP_INSTALL pycryptodome
+fi
+
 # 使用 Poetry 管理 Python 依赖
 if ! command -v poetry &> /dev/null; then
     echo "Poetry 未安装，请先运行安装依赖步骤"

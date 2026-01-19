@@ -28,7 +28,9 @@ try {
 $requirements = @(
     @{Name='requests'; Version='2.31.0'},
     @{Name='pyperclip'; Version='1.8.2'},
-    @{Name='cryptography'; Version='42.0.0'}
+    @{Name='cryptography'; Version='42.0.0'},
+    @{Name='pywin32'; Version='306'},
+    @{Name='pycryptodome'; Version='3.19.0'}
 )
 
 $globalRequirements = $requirements
