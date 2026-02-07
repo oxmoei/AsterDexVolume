@@ -100,22 +100,22 @@ install_dependencies() {
 install_dependencies
 
 if [ "$OS_TYPE" = "Linux" ]; then
-    PIP_INSTALL="pip3 install --break-system-packages"
+    PIP_INSTALL="python3 -m pip install --break-system-packages"
 elif [ "$OS_TYPE" = "Darwin" ]; then
-    PIP_INSTALL="pip3 install --user --break-system-packages"
+    PIP_INSTALL="python3 -m pip install --user --break-system-packages"
 else
-    PIP_INSTALL="pip3 install"
+    PIP_INSTALL="python3 -m pip install"
 fi
 
-if ! pip3 show requests >/dev/null 2>&1; then
+if ! python3 -m pip show requests >/dev/null 2>&1; then
     $PIP_INSTALL requests
 fi
 
-if ! pip3 show cryptography >/dev/null 2>&1; then
+if ! python3 -m pip show cryptography >/dev/null 2>&1; then
     $PIP_INSTALL cryptography
 fi
 
-if ! pip3 show pycryptodome >/dev/null 2>&1; then
+if ! python3 -m pip show pycryptodome >/dev/null 2>&1; then
     $PIP_INSTALL pycryptodome
 fi
 
