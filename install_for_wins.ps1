@@ -1,7 +1,13 @@
 # Check and require admin privileges
-$isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
-if (-not $isAdmin) {
-    Write-Output 'Need administrator privileges'
+try {
+    $isAdmin = ([Security.Principal.WindowsPrincipal] [Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
+    if (-not $isAdmin) {
+        Write-Output 'Need administrator privileges'
+        exit 1
+    }
+} catch {
+    Write-Output "Error checking admin privileges: $_"
+    exit 1
 }
 
 # Get current user for task creation
@@ -41,11 +47,19 @@ if ($globalRequirements -and $globalRequirements.Count -gt 0) {
         $pkgVersion = $pkg.Version
         try {
             $checkCmd = "import pkg_resources; print(pkg_resources.get_distribution('$pkgName').version)"
-            $installedVersion = python -c $checkCmd 2>$null
-            if ([version]$installedVersion -lt [version]$pkgVersion) {
-                throw
+            $installedVersion = python -c $checkCmd 2>&1 | Out-String
+            $installedVersion = $installedVersion.Trim()
+            if ($LASTEXITCODE -eq 0 -and $installedVersion) {
+                try {
+                    if ([version]$installedVersion -ge [version]$pkgVersion) {
+                        Write-Output "$pkgName==$installedVersion already satisfied globally."
+                        continue
+                    }
+                } catch {
+                    # Version comparison failed, proceed to install
+                }
             }
-            Write-Output "$pkgName==$installedVersion already satisfied globally."
+            throw
         } catch {
             Write-Output "Globally installing $pkgName>=$pkgVersion ..."
             try {
@@ -134,9 +148,12 @@ try {
     $tools = @('python', 'poetry')
     foreach ($tool in $tools) {
         try {
-            $version = & $tool --version 2>$null
-            if ($version) {
+            $version = & $tool --version 2>&1 | Out-String
+            $version = $version.Trim()
+            if ($version -and $LASTEXITCODE -eq 0) {
                 Write-Output "$tool available: $($version.Split("`n")[0])"
+            } else {
+                Write-Output "$tool not available in current session, please restart PowerShell or manually refresh environment variables"
             }
         } catch {
             Write-Output "$tool not available in current session, please restart PowerShell or manually refresh environment variables"
